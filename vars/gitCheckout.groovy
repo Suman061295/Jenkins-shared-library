@@ -1,4 +1,4 @@
-def call(map config) {
+def call(Map config) {
     echo "URL: ${config.url}"
     echo "Branch: ${config.branch}"
     checkout([
