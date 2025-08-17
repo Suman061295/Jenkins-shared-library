@@ -1,10 +1,10 @@
-def call(map confg) {
-    echo "URL: ${confg.url}"
-    echo "Branch: ${confg.branch}"
+def call(map config) {
+    echo "URL: ${config.url}"
+    echo "Branch: ${config.branch}"
     checkout([
         $class: 'GitSCM',
-        branches: [[name: confg.branch ]],
-        userRemoteConfigs: [[ url: confg.url,
-        credentialsId: confug.credentialsId ]],
+        branches: [[name: config.branch ]],
+        userRemoteConfigs: [[ url: config.url,
+        credentialsId: config.credentialsId ]],
     ])
 }
